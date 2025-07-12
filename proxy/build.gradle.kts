@@ -4,8 +4,13 @@ import io.papermc.fill.model.BuildChannel
 plugins {
     application
     id("velocity-init-manifest")
+    id("velocity-publish")
     alias(libs.plugins.shadow)
     alias(libs.plugins.fill)
+}
+
+java {
+    withSourcesJar()
 }
 
 application {
